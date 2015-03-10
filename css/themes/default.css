@@ -4,11 +4,10 @@
 /* theme */
 
 html {
-	font-size: 12px;
+	font-size: 100%;
 	line-height: 1.5rem;
 	background-color: #111111;
 	color: #eeeeee;
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 body {
@@ -56,7 +55,6 @@ body {
     font-family: "Montserrat", Impact, sans-serif;
 	font-weight: bold;
 	color: #eeeeee;
-	text-shadow: 1px 2px 0 rgba(255,255,255,0.2);
 }
 
 .flowtime h1 {
@@ -163,7 +161,6 @@ body {
 .flowtime pre,
 .flowtime code {
 	font-family: monospace;
-	margin: 1rem 0;
 }
 
 .flowtime strong {
@@ -313,7 +310,7 @@ body {
 @media screen and (min-height: 41em) and (min-width: 80em)
 {
 	html {
-		font-size: 120%;
+		font-size: 80%;
 	}
 
 	.ft-page {
@@ -324,7 +321,7 @@ body {
 @media screen and (min-height: 50em) and (min-width: 90em)
 {
 	html {
-		font-size: 140%;
+		font-size: 90%;
 	}
 
 	.ft-page {
@@ -368,3 +365,4 @@ body {
 	bottom: -32%;
 	z-index: 30;
 }
+

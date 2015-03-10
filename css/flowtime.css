@@ -276,3 +276,18 @@
 		-webkit-transform: translateZ(0) !important;
 				transform: translateZ(0) !important;
 	}
+
+
+
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+pre[class*="language-"] {
+    display: block; padding: 0.5em;
+    background: #3F3F3F;
+    color: #DCDCDC;
+}
