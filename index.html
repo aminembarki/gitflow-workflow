@@ -43,6 +43,8 @@
             </div>
         </div>
         <div id="/section-1/page-2" class="ft-page" data-id="page-2">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Git Flow is:</h1>
 
             <p class="ft-fragment">
@@ -54,8 +56,11 @@
             <a class="refs" href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a>
             </p>
         </div>
-
+        </div>
+        </div>
         <div id="/section-1/page-3" class="ft-page" data-id="page-3">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Why use Git Flow?</h1>
             <ul>
                 <li class="ft-fragment">Separation of production and development code</li>
@@ -65,8 +70,11 @@
                 <li class="ft-fragment">Encourages peer code reviews</li>
             </ul>
         </div>
-
+        </div>
+        </div>
         <div id="/section-1/page-4" class="ft-page" data-id="page-4">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>How do I use it?</h1>
 
             <ul>
@@ -93,9 +101,13 @@
                     The OSX / Windows Client <a href="http://www.sourcetreeapp.com/">SourceTree</a> (is an excellent git gui and provides git-flow support
                 </li>
             </ul>
+            </div>
+        </div>
         </div>
 
         <div id="/section-1/page-4" class="ft-page" data-id="page-4">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Branches</h1>
 
             <p class="ft-fragment"><strong>master </strong>: production code</p>
@@ -110,17 +122,22 @@
 
             <p class="ft-fragment"><strong>suport/ </strong>: experimental</p>
         </div>
-
+        </div>
+        </div>
         <div id="/section-1/page-5" class="ft-page" data-id="page-5">
+
             <h1>The Branching Model</h1>
 
             <div class="stack-center">
                 <img class="stacked-center" src="http://nvie.com/img/git-model@2x.png">
             </div>
+
         </div>
     </div>
     <div class="ft-section" data-id="section-2">
         <div id="/section-2/page-1" class="ft-page" data-id="page-1">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Need Help?</h1>
                 <pre>
 <code data-trim="" class="language-bash">~ $ git flow help
@@ -130,7 +147,11 @@
 # Shows the help menu for a specific subcommand</code>
                 </pre>
         </div>
+        </div>
+        </div>
         <div id="/section-2/page-2" class="ft-page" data-id="page-2">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Initialise Git Flow</h1>
             <div >
 <pre><code  class="language-bash">~ <span class="variable">$ </span>git flow init
@@ -148,12 +169,16 @@ Version tag prefix? []
             </div>
 
             <div class="ft-fragment">
-            <span>Tip: Automatically accept the default branch names</span>
+            <strong>Tip: Automatically accept the default branch names</strong>
 <pre><code  class="language-bash">~ $ git flow init -d
 # Accepts the default branch names.</code></pre>
             </div>
         </div>
+        </div>
+        </div>
         <div id="/section-2/page-3" class="ft-page" data-id="page-3">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Team agreement for Git Flow</h1>
             <ol>
                 <li class="ft-fragment">Never, ever commit code directly to <code>master</code></li>
@@ -164,9 +189,13 @@ Version tag prefix? []
             </ol>
 
         </div>
+        </div>
+        </div>
     </div>
     <div class="ft-section" data-id="section-3">
         <div id="/section-3/page-1" class="ft-page" data-id="page-1">
+        <div class="stack-center">
+            <div class="stacked-center">
             <h1>Features</h1>
             <pre><code  class="language-bash">~$ git flow feature "command"
 
@@ -181,10 +210,12 @@ Version tag prefix? []
                 Checkout can be a full feature name or a prefix
             </div>
         </div>
+        </div>
+        </div>
         <div id="/section-3/page-2" class="ft-page" data-id="page-2">
+            <div class="stack-center">
+                <div class="stacked-center">
             <h1>Start a new feature branch</h1>
-
-
 <pre><code  class="language-bash">~ $ git flow feature start {name}</code></pre>
             <div>
                team agreement : {name} Redmine story-code/story-name  ex: [2851/story]"
@@ -204,9 +235,233 @@ Now, start committing on your feature. When done, use:
 git flow feature finish 2851/authenication</code></pre>
             </div>
         </div>
+            </div>
+        </div>
+        <div id="/section-3/page-3" class="ft-page" data-id="page-3">
+            <div class="stack-center">
+                <div class="stacked-center">
+            <h1>Finish a feature</h1>
+            <p>
+            <strong>Recommended: Rebase Your Feature</strong>
+            <span>Ensure that your feature is up-to-date</span>
+            <pre><code  class="language-bash">~ $ git flow feature rebase</code></pre>
+            <span class="notes">
+                Rewinds the feature, updates from develop and re-applies the feature changes<br>
+                Ensures that the feature code is up to date and will merge correctly.
+            </span>
+            </p>
+            <br/>
+<div class="ft-fragment">
+<pre><code  class="language-bash">
+~ $ git flow feature finish {name}
+</code></pre>
+<pre><code  class="language-bash">
+~ $ git flow feature finish 2851/authenication
+
+Switched to branch 'develop'
+Updating 5c04d5a..6487134
+Fast-forward
+...
+31 files changed, 5051 insertions(+)
+Deleted branch feature/foo (was 6487134).
+
+Summary of actions:
+- The feature branch 'feature/2851/authenication' was merged into 'develop'
+- Feature branch 'feature/2851/authenication' has been removed
+- You are now on branch 'develop'
+</code></pre>
+            </div>
+            <div class="ft-fragment">
+            <p >And repeat...</p>
+            </div>
+        </div>
+            </div>
+        </div>
     </div>
+    <div class="ft-section" data-id="section-4">
+        <div id="/section-4/page-1" class="ft-page" data-id="page-1">
+            <div class="stack-center">
+                <div class="stacked-center">
+            <h1>Releases</h1>
+<pre><code  class="language-bash">~$ git flow release "command"
+"list": Lists existing releases
+"start": Start new feature
+"finish": finish feature</code></pre>
 
+        </div>
+            </div>
+        </div>
+          <div id="/section-4/page-2" class="ft-page" data-id="page-2">
+              <div class="stack-center">
+                  <div class="stacked-center">
+            <h1>Start a new release</h1>
+              <p>
+<pre><code  class="language-bash">~$ git flow release start {version}</code></pre>
 
+              <div class="ft-fragment">
+                  team agreement : {version} MAJOR.MINOR.PATCH  check @<a href="http://semver.org/">Semantic Versioning</a>
+              </div>
+              </p> <br/>
+              <div class="ft-fragment">
+            <pre><code  class="language-bash">
+~ $ git flow release start 1.1.0
+
+Switched to a new branch 'release/1.1.0'
+
+Summary of actions:
+- A new branch 'release/0.1.0' was created, based on 'develop'
+- You are now on branch 'release/1.1.0'
+
+Follow-up actions:
+- Bump the version number now!
+- Start committing last-minute fixes in preparing your release
+- When done, run:
+
+git flow release finish '1.1.0'
+            </code></pre>
+              </div>
+
+        </div>
+              </div>
+          </div>
+          <div id="/section-4/page-3" class="ft-page" data-id="page-3">
+              <div class="stack-center">
+                  <div class="stacked-center">
+            <h1>Finish a release</h1>
+              <p>
+<pre><code  class="language-bash">~ $ git flow release finish {version}</code></pre>
+
+              </p>
+              <div class="ft-fragment">
+<pre><code  class="language-bash">
+~ $ git flow release finish 1.1.0
+
+...
+
+Deleted branch release/1.1.0 (was f2aee7d).
+
+Summary of actions:
+- Latest objects have been fetched from 'origin'
+- Release branch has been merged into 'master'
+- The release was tagged '1.1.0'
+- Release branch has been back-merged into 'develop'
+- Release branch 'release/1.1.0' has been deleted
+</code></pre>
+              </div>
+              <div class="ft-fragment">
+                  <strong>Tip: Finish a release in one command</strong>
+          <pre><code  class="language-bash">
+~ $ git flow release finish -pm {message} {version}
+# Specify a commit message and automatically push the changes.</code></pre>
+              </div>
+        </div>
+              </div>
+          </div>
+        <div id="/section-4/page-4" class="ft-page" data-id="page-4">
+            <div class="stack-center">
+                <div class="stacked-center">
+            <h1>Hotfixes</h1>
+<pre><code  class="language-bash">~$ git flow hotfix "command"
+"list": Lists all hotfixes
+"start": Start a hotfix
+"finish": finish a hotfix</code></pre>
+
+        </div>
+            </div>
+        </div>
+        <div id="/section-4/page-5" class="ft-page" data-id="page-5">
+            <div class="stack-center">
+                <div class="stacked-center">
+            <h1>Create a new hot fix</h1>
+            <p>
+            <pre><code  class="language-bash">~ $ git flow release start {version}</code></pre>
+
+            </p> <br/>
+            <div class="ft-fragment">
+<pre><code  class="language-bash">~ $ git flow hotfix start 1.1.1
+
+Switched to a new branch 'hotfix/1.1.1'
+
+Summary of actions:
+- A new branch 'hotfix/1.1.1' was created, based on 'master'
+- You are now on branch 'hotfix/1.1.1'
+
+Follow-up actions:
+- Bump the version number now!
+- Start committing your hot fixes
+- When done, run:
+
+git flow hotfix finish '1.1.1' </code></pre>
+            </div>
+
+        </div>
+            </div>
+        </div>
+        <div id="/section-4/page-6" class="ft-page" data-id="page-6">
+            <div class="stack-center">
+                <div class="stacked-center">
+            <h1>Finish a hot fix</h1>
+            <p>
+            <pre><code  class="language-bash">~ $ git flow hotfix  finish {version}</code></pre>
+
+            </p>
+            <div class="ft-fragment">
+<pre><code  class="language-bash">
+~ $ git flow hotfix finish 1.1.1
+Switched to branch 'master'
+Merge made by the 'recursive' strategy.
+.htaccess | 8 ++++----
+1 file changed, 4 insertions(+), 4 deletions(-)
+Switched to branch 'develop'
+Merge made by the 'recursive' strategy.
+.htaccess | 8 ++++----
+1 file changed, 4 insertions(+), 4 deletions(-)
+Deleted branch hotfix/1.1.1 (was 6d04738).
+
+Summary of actions:
+- Latest objects have been fetched from 'origin'
+- Hotfix branch has been merged into 'master'
+- The hotfix was tagged '1.1.1'
+- Hotfix branch has been back-merged into 'develop'
+- Hotfix branch 'hotfix/1.1.1' has been deleted
+</code></pre>
+            </div>
+            <div class="ft-fragment">
+                <strong>Tip: hotfix a release in one command</strong>
+          <pre><code  class="language-bash">
+~ $ git flow hotfix finish -pm {message} {version}
+# Specify a commit message and automatically push the changes.</code></pre>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div class="ft-section" data-id="section-5">
+        <div id="/section-5/page-1" class="ft-page" data-id="page-1">
+            <div class="stack-center">
+                <div class="stacked-center">
+                    <h1>Resources</h1>
+                    <ul>
+
+                        <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a></li>
+                        <li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/</a></li>
+                        <li><a href="http://danielkummer.github.io/git-flow-cheatsheet/">http://danielkummer.github.io/git-flow-cheatsheet/</a></li>
+                        <li><a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a></li>
+                        <li><a href="https://github.com/nvie/gitflow/wiki">https://github.com/nvie/gitflow/wiki</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="/section-5/page-2" class="ft-page" data-id="page-2">
+            <div class="stack-center">
+                <div class="stacked-center">
+                    <h1>Thanks</h1>
+                    <p>Feedback appreciated!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="js/brav1toolbox.js"></script>

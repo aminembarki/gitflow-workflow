@@ -109,6 +109,7 @@ body {
 .flowtime ol,
 .flowtime dl {
 	margin: 0 2rem;
+    text-align: left;
 }
 
 .flowtime li,
